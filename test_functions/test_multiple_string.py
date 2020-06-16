@@ -1,3 +1,9 @@
+"""
+Program: test_multiple_string.py
+Author: Paul Ford
+Last date modified: 06/16/2020
+Purpose: test multiple_string function.
+"""
 import unittest
 
 from more_functions.string_functions import multiply_string
