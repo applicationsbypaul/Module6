@@ -5,6 +5,7 @@ Last date modified: 06/17/2020
 Purpose: Validates a users score and prints it back out.
          I have it where it prints and returns the end
          due to the wording in the assignment.
+         I have my exception handling in the function and not in main
 """
 
 
