@@ -1,3 +1,9 @@
+"""
+Program: test_inner_functions.py
+Author: Paul Ford
+Last date modified: 06/17/2020
+Purpose: test a square and a rectangle.
+"""
 import unittest
 
 from more_functions.inner_functions_assignment import measurements
