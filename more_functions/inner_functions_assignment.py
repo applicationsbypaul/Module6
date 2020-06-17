@@ -10,10 +10,16 @@ Purpose: accepts a list of measurements
 
 def measurements(rect):
     def area(a_list):  # calculates the area
-        return a_list[0] * a_list[1]
+        if len(a_list) > 1:
+            return a_list[0] * a_list[1]
+        else:
+            return a_list[0]**2
 
     def perimeter(a_list):  # calculates the perimeter
-        return 2 * ((a_list[0]) + (a_list[1]))
+        if len(a_list) > 1:
+            return 2 * ((a_list[0]) + (a_list[1]))
+        else:
+            return a_list[0] * 4
 
     return "Perimeter = {} Area = {}".format(perimeter(rect), area(rect))
 
