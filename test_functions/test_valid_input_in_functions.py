@@ -1,3 +1,9 @@
+"""
+Program: test_valid_input_in_functions.py
+Author: Paul Ford
+Last date modified: 06/17/2020
+Purpose: test score input function
+"""
 import unittest
 
 from more_functions.validate_input_in_functions import score_input
