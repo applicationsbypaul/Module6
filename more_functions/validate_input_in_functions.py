@@ -2,6 +2,10 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
     # if test score is default we will ask until
     # we get valid data
     if test_score != 0:
+        if isinstance(test_score, str):
+            raise ValueError
+        if int(test_score < 0) or int(test_score > 100):
+            raise ValueError
         while True:
             try:
                 test_score = int(test_score)
@@ -18,7 +22,7 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
 
 
 if __name__ == '__main__':
-    print(score_input('Paul', 50))
+    print(score_input('Paul', 'a'))
 
 # if not test_score.isdigit():
 # print(invalid_message)
