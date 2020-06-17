@@ -5,24 +5,23 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
         if isinstance(test_score, str):
             raise ValueError
         if int(test_score < 0) or int(test_score > 100):
-            raise ValueError
-        while True:
-            try:
-                test_score = int(test_score)
-                if int(test_score < 0) or int(test_score > 100):
-                    raise ValueError
+            while True:
+                try:
+                    test_score = int(test_score)
+                    if int(test_score < 0) or int(test_score > 100):
+                        raise ValueError
+                        continue
+                except ValueError:
+                    print(invalid_message)
+                    test_score = int(input('Please enter your test score: '))
                     continue
-            except ValueError:
-                print(invalid_message)
-                test_score = int(input('Please enter your test score: '))
-                continue
-            break
+                break
     # return {test_name: test_score}
     return test_name + ': ' + str(test_score)
 
 
 if __name__ == '__main__':
-    print(score_input('Paul', 'a'))
+    print(score_input('Paul', 50, 'Test'))
 
 # if not test_score.isdigit():
 # print(invalid_message)

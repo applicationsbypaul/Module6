@@ -18,10 +18,13 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             score_input('Paul', 101)
 
-    # def test_test_score_non_numeric(self):
-    #    self.assertEqual(score_input('Paul', 'a'), False)
-    #    with self.assertRaises(ValueError):
-    #        score_input('Paul', 'a')
+    def test_test_score_non_numeric(self):
+        with self.assertRaises(ValueError):
+            score_input('Paul', 'a')
+
+    def test_score_input_invalid_message(self):
+        with self.assertRaises(ValueError):
+            score_input('Paul', 'a', 'Test new message')
 
 
 if __name__ == '__main__':
