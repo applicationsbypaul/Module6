@@ -7,8 +7,8 @@ class MyTestCase(unittest.TestCase):
     def test_score_input_test_name(self):
         self.assertEqual(score_input('Paul'), 'Paul: 0')
 
-    # def test_score_input_test_score_valid(self):
-    #    self.assertEqual(score_input('Paul', 78), False)
+    def test_score_input_test_score_valid(self):
+        self.assertEqual(score_input('Paul', 78), 'Paul: 78')
 
     # def test_score_input_test_score_below_range(self):
     #    self.assertEqual(score_input('Paul', -13), False)
